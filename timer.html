@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Stop interval</button>
+    <script>
+
+var interval = setInterval(
+    function () {
+console.log("hello")
+    }, 3000
+) 
+document.querySelector("button").addEventListener("click", function(event){
+    event.preventDefault()
+    console.log(event) 
+})
+
+
+setTimeout(
+function(){
+    alert("hi there!");
+}, 2000
+
+)
+
+    </script>
+</body>
+</html>

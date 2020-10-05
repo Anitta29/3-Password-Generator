@@ -3,21 +3,16 @@ var smalLet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 var num = "1234567890".split("");
 var specChar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "~", "{", "}", "[", "]"];
 
-
-var generPassw = [];
-console.log(generPassw);
-
-
 // when user hit generate button
 var password = ""
 var minLen = 8;
 
-function generate() {
+function generate() {``
 
-    var pasLen = prompt("How many characters would you like to have?");
+    var pasLen = parseInt(prompt("How many characters would you like to have?"));
     if (pasLen < 8) {
         alert("Password should contain at least 8 characters");
-        return;
+        return generate();
     };
     
     
@@ -29,10 +24,13 @@ var confirmspecChar = confirm ("Do you want to use Special Character?");
 
 // (conditions) to check user's pick  (push?)
 
-if (confirmcapLet === true) {
-    generPassw = generPassw.concat(capLet);    
-}
+var generPassw = [];
 
+
+if (confirmcapLet === true) {
+    generPassw = generPassw.concat(capLet);
+    
+}
 
 if (confirmsmalLet === true) {
     generPassw = generPassw.concat(smalLet);
@@ -46,26 +44,40 @@ if (confirmspecChar === true) {
     generPassw = generPassw.concat(specChar);
 }
 console.log(generPassw);
-if (confirmspecChar, confirmsmalLet, confirmnum, confirmspecChar === false) {
-    alert("Password should contain at least one from quaestions")
-    return (confirmcapLet);
+
+if (!confirmcapLet && !confirmsmalLet && !confirmnum && !confirmspecChar) {
+    alert("Password should contain at least one specific character")
+    return generate();
 }
 
 // Math.random function
 
-
-console.log(pasLen, confirmcapLet, confirmsmalLet, confirmnum, confirmspecChar);
-
+console.log("=");
+console.log(typeof pasLen, confirmcapLet, confirmsmalLet, confirmnum, confirmspecChar);
+console.log("=");
 // create for loop to choose password characters
-var password = "";
-for (let i = 0; i < pasLen; i++) {
-    randomSymb = generPassw[Math.floor(generPassw.length * Math.random())]
-};
-console.log(randomSymb);
-password += randomSymb;
 
-console.log(password);
+
+var password = [];
+
+for (let i = 0; i < pasLen; i++) {
+    randomSymb = Math.floor(Math.random() * generPassw.length);
+    password.push(generPassw[randomSymb]);
+
+};
+password=password.join("");
+
+
+
+document.getElementById("display").value = password;
+
+
+// console.log(randomSymb);
+// password += randomSymb;
+
+
     // save random generated password???
 
 };
+
 generate();

@@ -1,3 +1,22 @@
 body {
     text-align: center;
+    background-image: url(nicekeys.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Bungee Shade', cursive;
+   
+
+}
+.card {
+    text-align: center;
+    color: black;
+    font-family: 'Bungee Shade', cursive;
+    background-image: url(ombregrey.jpg);
+    border-color: white;
+}
+h1 {
+    font-size: 60px;
+    margin-top: auto;
+    font-family: 'Bungee Shade', cursive;
+    color: white;
 }
