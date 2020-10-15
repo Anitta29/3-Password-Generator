@@ -17,6 +17,8 @@ Password Generator develops a strong password, asking user specific questions of
 Nowadays with a huge growth in technology, password plays a vital and sometimes crucial role in modern life.
 A strong password can secure and protect the most sensitive and significant data in any business and sphere.
 
+# Appearance
+<img width="1440" alt="Screen Shot 2020-10-05 at 2 04 21 PM copy" src="https://user-images.githubusercontent.com/67982161/96191118-72370080-0f11-11eb-84d2-875fa1ab494a.png">
 
 
 # Contributor

@@ -1,10 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": "../4-Code-Quiz"
 		},
 		{
-			"path": "../../../1/Homework/03-JS-Password-Generator"
+			"path": "../../RUT-SOM-FSF-PT-09-2020-U-C/04-Web-APIs"
+		},
+		{
+			"path": "."
 		}
 	],
 	"settings": {}
