@@ -12,6 +12,9 @@ function generate() {``
     var pasLen = parseInt(prompt("How many characters would you like to have?"));
     if (pasLen < 8) {
         alert("Password should contain at least 8 characters");
+        
+    }else if (pasLen > 128) {
+        alert("Password should contain no more than 128 characters");
         return generate();
     };
     
